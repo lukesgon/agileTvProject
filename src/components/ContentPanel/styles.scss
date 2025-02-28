@@ -8,6 +8,7 @@
   position: sticky;
   z-index: 100;
   box-shadow: -10vh -5vh 10vh rgba(0, 0, 0, .8);
+  background-color: $tertiary-color;
 
   // Ajuste de posição no modo retrato
   @media (orientation: portrait) {
