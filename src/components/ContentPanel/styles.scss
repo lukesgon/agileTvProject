@@ -30,6 +30,7 @@
 
   .content-panel_nav {
     & > .content-panel_nav_list {
+      padding-top: 3vh;
       list-style: none;
       display: flex;
       justify-content: space-evenly;
@@ -37,6 +38,7 @@
 
       // Ajuste de alinhamento e espaçamento para paisagem
       @media (orientation: landscape) {
+        padding-top: 0;
         justify-content: start;
         gap: 4vw;
       }
