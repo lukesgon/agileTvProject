@@ -28,7 +28,7 @@ const EpCard = ({className, epData, onClick, isActive}:EpCardProps)=> {
       <section className={!isActive ? 'track-list_ep-card--disabled ' :''}> {/*Aqui optei por simplificar a lógica de expansão de conteúdos com a utilização de uma classe que aplica "display:none" caso o cartão não seja o ativo na track list. */}
         <img src={epData.Image} alt={epData.Title+' episode thumb'} className='track-list_ep-card_img'/>
         <p>
-          {epData.Synopsis}
+          {epData.Synopsis || 'Sinopse Indisponível...' /*Verifica se há uma sinopse disponível, caso não haja, informa o usuário. */}
         </p>
       </section>
     </section>
