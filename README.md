@@ -5,6 +5,17 @@ Este projeto foi desenvolvido como parte de um teste para a posição de **Front
 
 ---
 
+## 🌎Onde acessar a Prévia?
+Este projeto pode ser visualizado através do link: [https://lukesgon.github.io/agileTvProject](https://lukesgon.github.io/agileTvProject/)
+
+---
+
+## 🎯Quais foram os Objetivos atingidos?
+Além de cumprir a proposta de uma página fixa para a visualização do conteúdo em sobreposição à tela de pesquisa de conteúdos da plataforma, como meta pessoal optei por trabalhar com uma postura mobile first, priorizando não apenas o cumprimento dos requisitos básicos, mas uma responsividade adequada dentro do plano de até 4 dias para cumprimento da tarefa.
+Tendo essa demanda pessoal em vista, optei pela simplificação do processo de responsividade, considerando o prazo, onde optei pela utilização de unidades não tão convencionais (mas com certeza eficiêntes) para a estilização das fontes textuais, como vh e vw, buscando equilibrar as dimensões em proporção às telas utilizadas para a visualização do projeto. Como resultado é possível a visualização tanto em modo paisagem como retrato, na maioria dos dispositivos, com leves distorções em função da proporção da tela do dispositivo.
+Em especial no formato retrato, houve a preocupação de possibilitar a visualização dos detalhes do produto, mas principalmente focar nos episódios disponíveis, caso seja a vontade do usuário.
+
+---
 ## 🛠 Tecnologias utilizadas
 O projeto foi desenvolvido utilizando as seguintes tecnologias:
 - **Vite** → Ferramenta para inicialização e build rápida de projetos React.
