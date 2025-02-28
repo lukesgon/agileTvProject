@@ -1,0 +1,83 @@
+@use '../../index.scss' as *;
+
+//A estilização do cabeçalho do título, foi feita tal que, respeite a aproximação do exemplo proposto do no projeto, além de causar uma espécie de efeito "sanfona" na sobreposição de informações que o usuário deseja ocultar ao longo da interação com os detalhes e episódios do conteúdo, característica que pode ser observada no constante uso da propriedade sticky ao longo dos elementos.
+
+.header {
+  position: sticky;
+  top: 110px;
+  
+  display: flex;
+  flex-direction: column;
+  
+  color: $primary-color;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+
+  margin: -10px 0;
+  z-index: 150;
+  
+  @media (orientation: landscape) {
+    position: static;
+    padding: 3vh 2vh 6vh 6vh;
+    background-color: transparent;
+    margin: 0;
+  }
+
+  .header_title {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header_close-btn{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    
+    z-index: 100;
+
+    position: fixed;
+    top: 0.5rem;
+    right: 0;
+
+    fill: $secondary-color;
+
+    @media (orientation:landscape) {
+      position: static;
+    }
+
+    &:hover {
+      fill: $primary-color;
+    }
+  }
+  
+  .header_close-btn_icon{
+    width: 40px;
+    height: 40px;
+    
+    fill: inherit;
+    
+  }
+
+  .content-header{
+    position: sticky;
+    top: 30px;
+    font-size: 4vh;
+    z-index: 10;
+    @media (orientation:landscape) {
+      font-size: 4vw;
+      margin: -5px 0;
+    }
+  }
+
+  .content-header_subtitle{
+    color: $secondary-color;
+    font-size: 2vh;
+
+    @media (orientation: landscape) {
+      font-size: 2vw;
+    }
+  }
+
+  
+}

@@ -1,0 +1,44 @@
+@use '../../index.scss' as *;
+
+.track-list_ep-card {
+  cursor: pointer;
+  width: 100%;
+
+  padding: 2vw 1vw;
+
+  border-bottom: solid 2px $quaternary-color;
+
+  @media (orientation:landscape) {
+    padding: 1vh;
+  }
+}
+
+.track-list_ep-card_header {
+  color: $secondary-color;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  white-space: nowrap; 
+  overflow: hidden; /* Garante que o overflow seja ocultado */
+  
+  &>h4 {
+    display: block;
+    text-overflow: ellipsis; /* Certifica-se que o texto seja cortado com reticências */
+    width: 70%; /* Define a largura do contêiner para que o texto ultrapasse */
+    overflow: hidden; /* Garante que o texto que ultrapassa seja ocultado */
+    white-space: nowrap; /* Impede a quebra de linha */
+  }
+}
+
+.track-list_ep-card_header--active {
+  color: $primary-color;
+}
+
+
+.track-list_ep-card_img {
+  width: 100%;
+}
+
+.track-list_ep-card--disabled {
+  display: none;
+}

@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap'); //Importação da fonte indicada, diretamente do Fonts do Google.
+
+//Paleta de Cores
+$primary-color: #FFF;
+$secondary-color: #9f9fa1;
+$tertiary-color: #07080A;
+$quaternary-color: #202024;
+$quinary-color: #41a077;
+
+//Padronização do Projeto
+
+:root {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background-color: $tertiary-color;
+}

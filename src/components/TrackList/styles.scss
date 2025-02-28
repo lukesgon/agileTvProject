@@ -1,0 +1,114 @@
+@use '../../index.scss' as *;
+
+.track-list {
+  // Container principal que exibe a lista de temporadas
+  width: 100%; 
+  height: fit-content;
+  max-height: 70vh;
+
+  @media (orientation:landscape) {
+    // Estilo para a versão em paisagem
+    position: fixed;
+    top: 6.5vh;
+    right: 6rem;
+    width: 20vw;
+  }
+}
+
+.track-list_header {
+  // Cabeçalho que contém a borda inferior destacada
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  border-bottom: 2px solid $quaternary-color;
+}
+
+.track-list_season-list {
+  // Lista de botões de temporadas
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  overflow: hidden;
+  width: 100%;
+  height: fit-content;
+}
+
+.track-list_season-btn {
+  // Botões das temporada
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+  border: none;
+  background-color: transparent;
+  font-size: 3vh;
+  color: $secondary-color;
+  min-width: 7vh;
+  padding: 2vh 1vw 2vh 1vw;
+  margin-bottom: -2px;
+  border-bottom: 2px solid $quaternary-color;
+
+  @media (orientation:landscape) {
+    padding: 0;
+    padding-bottom: 2vh;
+    min-width: 3vw;
+  }
+
+  &:hover{
+    color: $primary-color;
+  }
+
+  &:after {
+    position: relative;
+    display: block;
+    bottom: -2vh;
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: transparent;
+  }
+
+  &:hover:after {
+    background-color: $quinary-color;
+  }
+}
+
+.track-list_season-btn--active {
+  // Estilo para o botão de temporada ativo
+  position: relative;
+  color: $primary-color;
+
+  &:after {
+    position: relative;
+    display: block;
+    bottom: -2vh;
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: $quinary-color;
+  }
+
+}
+
+.tracklist_btn--lft, .tracklist_btn--rgt {
+  cursor: pointer;
+  background-color: transparent;
+  color: $quaternary-color;
+  font-size: 3vh;
+  border: none;
+  width: 4vh;
+
+  &:hover {
+    color: $quinary-color;
+  }
+}
+
+.track-list_episodes {
+  width: 100%;
+  height: 50vh;
+  overflow: auto;
+  
+  @media (orientation:landscape) {
+    height: 38.5vh;
+  }
+}

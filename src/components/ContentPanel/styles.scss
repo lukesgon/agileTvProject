@@ -1,0 +1,69 @@
+@use '../../index.scss' as *;
+
+.content-panel {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  color: $secondary-color;
+  position: sticky;
+  z-index: 100;
+  box-shadow: -10vh -5vh 10vh rgba(0, 0, 0, .8);
+
+  // Ajuste de posição no modo retrato
+  @media (orientation: portrait) {
+    top: 200px;
+  }
+
+  // Estilo para modo paisagem (layout fixo)
+  @media (orientation: landscape) {
+    padding: 2vw 4vw;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 35vh;
+    background-color: $tertiary-color;
+    z-index: 40;
+  }
+
+  .content-panel_nav {
+    & > .content-panel_nav_list {
+      list-style: none;
+      display: flex;
+      justify-content: space-evenly;
+      border-bottom: 2px solid $quaternary-color;
+
+      // Ajuste de alinhamento e espaçamento para paisagem
+      @media (orientation: landscape) {
+        justify-content: start;
+        gap: 4vw;
+      }
+    }
+  }
+}
+
+.content-panel_nav-btn {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  color: $secondary-color;
+  font-size: 1.2rem;
+  border: none;
+  border-bottom: solid 3px transparent;
+  margin-bottom: -2px;
+  padding-bottom: 2.5vh;
+
+  // Estilo ajustado para modo paisagem
+  @media (orientation: landscape) {
+    font-size: 2.5vh;
+    padding-bottom: 2vh;
+  }
+}
+
+// Estilo para botões ativos (destaque)
+.content-panel_nav-btn--active {
+  color: $primary-color;
+  border-bottom: solid 2px $quinary-color;
+}

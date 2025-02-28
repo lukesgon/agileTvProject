@@ -1,0 +1,38 @@
+@use '../../index.scss' as *;
+
+.cast-panel_card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 15vh;
+  height: 10vh;  
+  
+  color: $secondary-color;
+  text-decoration: none;
+  text-align: center;
+
+  background-color: $quaternary-color;
+
+  padding: 2vh 1vh;
+
+  // Configurações específicas para telas em modo paisagem
+  @media (orientation:landscape) {
+    min-width: 15vw;
+    height: 7vw;
+
+    font-size: 2.5vh;
+  }
+
+}
+
+.cast-card_person {
+  color: $primary-color;
+}
+
+// Efeito de hover para alteração de cores
+.cast-panel_card:hover {
+  color: $primary-color;
+  background-color: $quinary-color;
+}

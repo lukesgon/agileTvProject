@@ -1,0 +1,52 @@
+// Container para a aplicação da máscara fade
+.background-container {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: -1;
+
+  // Configuração para telas em modo paisagem (Desktop)
+  @media (orientation: landscape) {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// A imagem
+.background-container_img {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  z-index: 20; // A imagem fica atrás do gradiente
+
+  @media (orientation: landscape) {
+    position: static;
+    height: auto;
+  }
+}
+
+// Máscara fade (aplicada sobre a imagem)
+.background-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 150%;
+  height: 100%;
+  background: radial-gradient(ellipse, rgba(0, 0, 0, 0.2) 20%, rgba(0, 0, 0, 1) 90%);
+  z-index: 30; // Garante que o gradiente fique acima da imagem 
+  pointer-events: none; // Evita que o gradiente interfira na interação 
+  transform: translate(-30%);
+
+  @media (orientation:landscape) {
+    height: 170%;
+    transform: translate(-30%, -30%);
+  }
+}

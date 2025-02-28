@@ -1,0 +1,17 @@
+@use '../../index.scss' as *;
+
+.track-list_ep-card_play-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.play-button_icon {
+  fill: $secondary-color;
+  background-color: transparent;
+  width: 2.5vh;
+
+  &:hover {
+    fill: $quinary-color;
+  }
+}

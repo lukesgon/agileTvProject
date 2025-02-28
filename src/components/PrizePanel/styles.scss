@@ -1,0 +1,17 @@
+@use '../../index.scss' as *;
+
+.prize-panel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $primary-color;
+
+  width: 100%;
+  height: 15vh;
+
+  @media (orientation:landscape) {
+    width: 100%;
+    height: 100%;
+  }
+
+}

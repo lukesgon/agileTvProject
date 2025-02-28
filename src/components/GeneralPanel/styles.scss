@@ -1,0 +1,99 @@
+@use '../../index.scss' as *;
+
+.content-panel_general-panel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  
+  // Navegação do painel geral
+  & > .general-panel_nav {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    
+    & > .general-panel_nav_list {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      gap: 5vw;
+      list-style: none;
+      border: none;
+    }
+  }
+
+  // Sobre o conteúdo do painel
+  & > .general-panel_about {
+    width: 100%;
+    
+    & > .general-panel_about_title {
+      font-size: 3.5vh;
+    }
+    
+    & > .general-panel_about_content {
+      width: 100%;
+      max-height: 15vh;
+      overflow: auto;
+      z-index: 30;
+    }
+  }
+
+  @media (orientation: landscape) {
+    // Ajustes para o layout paisagem
+    & > .general-panel_nav {
+      padding: 2vw 3vw;
+      width: 25vw;
+      
+      & > .general-panel_nav_list {
+        justify-content: center;
+        gap: 0.2vw;
+      }
+    }
+    
+    & > .general-panel_about {
+      padding: 1vw 3vw;
+      width: 50vw;
+      
+      & > .general-panel_about_content {
+        font-size: 2.5vh;
+      }
+    }
+  }
+}
+
+.general-panel_btn {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 6vw;
+
+  background-color: transparent;
+  border: none;
+  font-weight: 1rem;
+  color: $secondary-color;
+  fill: $secondary-color;
+
+  // Estilo ajustado para modo paisagem
+  @media (orientation: landscape) {
+    font-size: 2.3vh;
+  }
+
+  // Interações de hover e focus
+  &:hover, &:focus {
+    color: $quinary-color;
+    fill: $primary-color;
+  }
+}
+
+
+.general-panel_btn_icon {
+  width: 4vh;
+  height: 4vh;
+  fill: inherit;
+  
+  @media (orientation:landscape) {
+    width: 4vw;
+    height: 4vw;
+  }
+}
